@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blizzard Tracking</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class=top>
+            <img src="logo.jpg" alt="Blizzard Anodizing" height="175" width="500">
+            <h1>Tracking System</h1>
+
+            
+            <form onsubmit="return false">
+                <input id='idform' placeholder="Tracking ID" />
+                <input id='idformsubmit' type='submit' value='Submit'>
+            </form>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div id='bottom' hidden>
+                <table class="resultTable">
+                        <tbody>
+                        <tr>
+                        <td>First Name:</td><td id='firstname'>cell2_1</td></tr>
+                        <tr>
+                        <td>Last Name:</td><td id='lastname'>cell2_2</td></tr>
+                        <tr>
+                        <td>Date:</td><td id='date'>cell2_3</td></tr>
+                        <tr>
+                        <td>Tracking ID:</td><td id='id'>cell2_4</td></tr>
+                        <tr>
+                        <td>Status:</td><td id='status'>cell2_5</td></tr>
+                        </tbody>
+                        </tr>
+                        </table>
+        </div>
+    </body>
+</html>

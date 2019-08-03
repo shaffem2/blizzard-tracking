@@ -1,0 +1,40 @@
+table.resultTable {
+    border: 4px solid #000000;
+    background-color: #EEC685;
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+    border-collapse: collapse;
+  }
+  table.resultTable td, table.resultTable th {
+    border: 0px solid #AAAAAA;
+    padding: 3px 1px;
+  }
+  table.resultTable tbody td {
+    font-size: 15px;
+    color: #000000;
+  }
+  table.resultTable tr:nth-child(even) {
+    background: #CA9B65;
+  }
+  table.resultTable tfoot td {
+    font-size: 14px;
+  }
+  table.resultTable tfoot .links {
+    text-align: right;
+  }
+  table.resultTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+
+  div.top
+  {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%; 
+    font-family: 'Georgia', serif
+  }
