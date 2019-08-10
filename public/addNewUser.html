@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blizzard Tracking</title>
+        <link rel="stylesheet" href="addNewUser.css">
+    </head>
+    <body>
+        <img src="logo.jpg" alt="Blizzard Anodizing" height="175" width="500">
+        <h1>Tracking System</h1>
+        <h2>Add new user</h2>
+
+        <form action='/user' method='post'>
+            <label>First Name</label>
+            <input name='firstname' type='text' placeholder="First Name">
+            <label>Last Name</label>
+            <input name='lastname' type='text' placeholder="Last Name">
+            <label>Date</label>
+            <input name='date' type='date' placeholder="Date">
+            <label>Tracking ID</label>
+            <input name='trackingId' type='text' placeholder="Tracking ID">
+            <label>Status</label>
+            <textarea name="status" placeholder="Status"></textarea>
+            <input type='submit' value='Submit'>
+        </form>
+    </body>
+</html>

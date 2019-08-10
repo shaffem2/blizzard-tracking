@@ -5,7 +5,9 @@ const mysql = require('mysql')
 const bodyparser = require('body-parser')
 
 app.use(morgan('short'));
-app.use(bodyparser.urlencoded({extended: false}));
+
+app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({ extended: true }))
 
 app.use(express.static('./public'));
 
@@ -60,6 +62,34 @@ app.get('/user/:id', (req, res) => {
         res.json(rows);
     })
 
+})
+
+
+
+app.post('/user', (req, res) => {
+    var body = req.body
+
+    var databaseObject = {
+        firstname: body.firstname,
+        lastname: body.lastname,
+        date: body.date,
+        id: body.trackingId,
+        status: body.status
+    }
+
+    const connection = getConnection();
+
+    const queryString = "INSERT INTO jobs SET ?"
+    var query = connection.query(queryString, databaseObject, (err, results, fields) => {
+        if (err) {
+            console.log("Failed to insert new user: " + err);
+        } else {
+            console.log('All good')
+            console.log('Results: ', results)
+            console.log('Fields: ', fields)
+        }
+        res.redirect('/addNewUser.html')
+    })
 })
 
 app.get("/", (req, res) => {
